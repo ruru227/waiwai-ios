@@ -1,0 +1,7 @@
+import Foundation
+public enum PrototypeRoute:Hashable,Sendable{
+ case comedianProfile,callType,instantPayment,ringing,videoCall,callComplete
+ case reservationCalendar,payment,reservationComplete,letterGift
+ case busy,timeout,duo,following,callHistory,notifications,settings,notificationSettings,inquiry,report,connectionError
+ case comedianDashboard,comedianProfileEdit,comedianVideos,comedianAvailability,comedianReservations,comedianLetterReply,comedianEarnings,comedianIncoming
+}
