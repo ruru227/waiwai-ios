@@ -6,6 +6,9 @@ workflows:
     environment:
       groups:
         - appstore_credentials
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.novalink.waiwai
       vars:
         BUNDLE_ID: "com.novalink.waiwai"
         XCODE_PROJECT: "waiwai.xcodeproj"
@@ -19,15 +22,10 @@ workflows:
           cd "$CM_BUILD_DIR"
           xcodegen generate
           xcodebuild -project "$XCODE_PROJECT" -scheme "$XCODE_SCHEME" -showBuildSettings > /dev/null
-      - name: Initialize signing keychain
-        script: keychain initialize
-      - name: Fetch App Store signing files
+      - name: Apply Codemagic signing profiles
         script: |
-          app-store-connect fetch-signing-files "$BUNDLE_ID" --type IOS_APP_STORE --create
-      - name: Add signing certificates
-        script: keychain add-certificates
-      - name: Apply provisioning profiles
-        script: xcode-project use-profiles
+          cd "$CM_BUILD_DIR"
+          xcode-project use-profiles
       - name: Set build number
         script: |
           cd "$CM_BUILD_DIR"
