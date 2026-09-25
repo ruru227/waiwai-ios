@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFE66A"/><stop offset=".48" stop-color="#FFB24D"/><stop offset="1" stop-color="#FF7F73"/></linearGradient>
+ <linearGradient id="left" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFD6EC"/><stop offset="1" stop-color="#FF4E8A"/></linearGradient>
+ <linearGradient id="right" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF4A8"/><stop offset="1" stop-color="#FFC52F"/></linearGradient>
+</defs>
+<rect width="1024" height="1024" fill="url(#bg)"/>
+<circle cx="325" cy="300" r="48" fill="url(#left)"/><circle cx="700" cy="300" r="48" fill="url(#right)"/>
+<path d="M250 380 C270 520 345 580 410 475 C465 385 500 365 548 455 C610 570 685 555 742 382" fill="none" stroke="url(#left)" stroke-width="82" stroke-linecap="round"/>
+<path d="M505 425 C548 355 585 395 620 465 C658 540 704 520 742 382" fill="none" stroke="url(#right)" stroke-width="82" stroke-linecap="round"/>
+<g stroke="#fff" stroke-width="22" stroke-linecap="round"><path d="M806 316l28-40"/><path d="M822 350l48-16"/><path d="M824 385l45 18"/></g>
+<text x="512" y="705" text-anchor="middle" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-weight="700" font-size="150" fill="#fff">waiwai</text>
+<text x="512" y="790" text-anchor="middle" font-family="Arial,sans-serif" font-weight="600" font-size="38" letter-spacing="10" fill="#fff">話そう、もっと近くで</text>
+</svg>
