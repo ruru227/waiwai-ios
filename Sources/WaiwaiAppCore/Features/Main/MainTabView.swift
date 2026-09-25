@@ -7,11 +7,9 @@ public struct WaiwaiMainTabView: View {
 
     public var body: some View {
         TabView(selection: $selected) {
-            NavigationStack {
-                PRDiscoveryView { _ in }
-            }
-            .tabItem { Label(MainTab.home.rawValue, systemImage: MainTab.home.icon) }
-            .tag(MainTab.home)
+            WaiwaiRootView()
+                .tabItem { Label(MainTab.home.rawValue, systemImage: MainTab.home.icon) }
+                .tag(MainTab.home)
 
             NavigationStack {
                 DiscoverView()
