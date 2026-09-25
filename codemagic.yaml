@@ -16,7 +16,13 @@ workflows:
       xcode: latest
     scripts:
       - name: Install XcodeGen
-        script: brew install xcodegen
+        script: |
+          brew install xcodegen imagemagick
+          ICON_DIR="$CM_BUILD_DIR/iOSApp/Resources/Assets.xcassets/AppIcon.appiconset"
+          SOURCE="$CM_BUILD_DIR/iOSApp/Resources/AppIconSource.svg"
+          magick "$SOURCE" -resize 1024x1024 "$ICON_DIR/AppIcon-1024.png"
+          magick "$SOURCE" -resize 120x120 "$ICON_DIR/AppIcon-60@2x.png"
+          magick "$SOURCE" -resize 180x180 "$ICON_DIR/AppIcon-60@3x.png"
       - name: Generate Xcode project
         script: |
           cd "$CM_BUILD_DIR"
